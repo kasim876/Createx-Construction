@@ -17,9 +17,13 @@
 }
 /*stylelint-disable*/
 :root {
-  --font-family: "Ubuntu";
+  --font-family: "Ubuntu", sans-serif;
+  --container-offset: 15px;
+  --container-width: 1260px;
   --color-white: #fff;
-  --color-black: #000;
+  --color-black: #1e212c;
+  --color-outer-space: #424551;
+  --color-primary: #ff5a30 ;
 }
 
 html {
@@ -56,6 +60,7 @@ img {
 
 a {
   text-decoration: none;
+  color: inherit;
 }
 
 .site-container {
@@ -108,4 +113,90 @@ a {
   -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
   background-color: transparent;
   cursor: pointer;
+}
+
+.header {
+  padding: 20px 0;
+  background-color: var(--color-white);
+}
+.header__container {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  -webkit-box-pack: justify;
+  -ms-flex-pack: justify;
+  justify-content: space-between;
+}
+.header__logo {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+.header__nav {
+  margin-left: -114px;
+  font-weight: 700;
+  font-size: 16px;
+  line-height: 160%;
+  color: var(--color-outer-space);
+}
+.header__nav-list {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+}
+.header__nav-item:not(:last-child) {
+  margin-right: 40px;
+}
+@media (any-hover: hover) {
+  .header__nav-link:hover {
+    color: var(--color-primary);
+  }
+}
+.header__contacts {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+}
+.header__contacts-item {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  padding-left: 52px;
+  background-position: left center;
+  background-repeat: no-repeat;
+}
+.header__contacts-item_phone {
+  background-image: url("../img/svg/phone.svg");
+}
+.header__contacts-item_mail {
+  background-image: url("../img/svg/chat.svg");
+}
+.header__contacts-item:not(:last-child) {
+  margin-right: 36px;
+}
+.header__contacts-caption {
+  display: block;
+  font-weight: 700;
+  font-size: 14px;
+  line-height: 150%;
+  color: var(--color-outer-space);
+}
+.header__contacts-value {
+  display: block;
+  font-size: 18px;
+  line-height: 150%;
+  color: var(--color-black);
 }
