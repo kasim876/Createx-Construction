@@ -23,7 +23,8 @@
   --color-white: #fff;
   --color-black: #1e212c;
   --color-outer-space: #424551;
-  --color-primary: #ff5a30 ;
+  --color-primary: #ff5a30;
+  --color-primary-active: #fc3300;
 }
 
 html {
@@ -115,8 +116,47 @@ a {
   cursor: pointer;
 }
 
+.btn-solid {
+  border-radius: 4px;
+  font-weight: 700;
+  font-size: 16px;
+  letter-spacing: 0.5px;
+  text-transform: uppercase;
+  color: var(--color-white);
+  background-color: var(--color-primary);
+  -webkit-transition: background-color 0.25s ease-in-out;
+  -o-transition: background-color 0.25s ease-in-out;
+  transition: background-color 0.25s ease-in-out;
+}
+@media (any-hover: hover) {
+  .btn-solid:hover {
+    background-color: var(--color-primary-active);
+  }
+}
+
+.btn-transparent {
+  border: 1px solid var(--color-primary);
+  border-radius: 4px;
+  font-weight: 700;
+  font-size: 16px;
+  letter-spacing: 0.5px;
+  text-transform: uppercase;
+  color: var(--color-primary);
+  background-color: rgba(0, 0, 0, 0);
+  -webkit-transition: background-color 0.25s ease-in-out, color 0.2s ease-in-out, border-color 0.25s ease-in-out;
+  -o-transition: background-color 0.25s ease-in-out, color 0.2s ease-in-out, border-color 0.25s ease-in-out;
+  transition: background-color 0.25s ease-in-out, color 0.2s ease-in-out, border-color 0.25s ease-in-out;
+}
+@media (any-hover: hover) {
+  .btn-transparent:hover {
+    border-color: var(--color-primary);
+    color: var(--color-white);
+    background-color: var(--color-primary);
+  }
+}
+
 .header {
-  padding: 20px 0;
+  padding: 22px 0;
   background-color: var(--color-white);
 }
 .header__container {
@@ -199,4 +239,54 @@ a {
   font-size: 18px;
   line-height: 150%;
   color: var(--color-black);
+}
+
+.main-first {
+  padding-top: 220px;
+  padding-bottom: 353px;
+  background-image: url("../img/hero-bg.jpg");
+  background-position: top center;
+  background-size: cover;
+  background-repeat: no-repeat;
+}
+.main-first__title {
+  margin: 0;
+  margin-bottom: 24px;
+  max-width: 600px;
+  font-weight: 700;
+  font-size: 72px;
+  line-height: 130%;
+  letter-spacing: 1px;
+  text-transform: uppercase;
+  color: var(--color-white);
+}
+.main-first__title span {
+  color: var(--color-primary);
+}
+.main-first__descr {
+  margin: 0;
+  margin-bottom: 61px;
+  max-width: 600px;
+  font-size: 20px;
+  line-height: 150%;
+  color: var(--color-white);
+}
+.main-first__btns {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+}
+.main-first__btn {
+  padding: 0 40px;
+  line-height: 50.5px;
+}
+.main-first__btn_transparent {
+  border-color: var(--color-white);
+  color: var(--color-white);
+}
+.main-first__btn:not(:last-child) {
+  margin-right: 24px;
 }
