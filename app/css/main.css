@@ -20,11 +20,13 @@
   --font-family: "Ubuntu", sans-serif;
   --container-offset: 15px;
   --container-width: 1260px;
+  --section-offset: 120px;
   --color-white: #fff;
   --color-black: #1e212c;
   --color-outer-space: #424551;
   --color-primary: #ff5a30;
   --color-primary-active: #fc3300;
+  --color-storm: #787a80;
 }
 
 html {
@@ -152,6 +154,86 @@ a {
     border-color: var(--color-primary);
     color: var(--color-white);
     background-color: var(--color-primary);
+  }
+}
+
+.title {
+  margin: 0;
+  font-weight: 700;
+  font-size: 46px;
+  line-height: 130%;
+  color: var(--color-black);
+}
+.title_center {
+  text-align: center;
+}
+
+.descr {
+  margin: 0;
+  font-size: 18px;
+  line-height: 150%;
+  color: var(--color-storm);
+}
+.descr_center {
+  text-align: center;
+}
+
+.video-wrapper {
+  position: relative;
+  height: 600px;
+}
+.video-wrapper::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  right: 0;
+  top: 0;
+  bottom: 0;
+  z-index: 50;
+  display: block;
+  background-color: rgba(30, 33, 44, 0.6);
+  -webkit-transition: opacity 0.25s ease-in-out, visibility 0.25s ease-in-out;
+  -o-transition: opacity 0.25s ease-in-out, visibility 0.25s ease-in-out;
+  transition: opacity 0.25s ease-in-out, visibility 0.25s ease-in-out;
+}
+.video-wrapper_played::after {
+  opacity: 0;
+  visibility: hidden;
+}
+.video-wrapper__content {
+  width: 100%;
+  height: 100%;
+  -o-object-fit: cover;
+  object-fit: cover;
+}
+.video-wrapper__btn {
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  z-index: 100;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+  border-radius: 50%;
+  width: 80px;
+  height: 80px;
+  background-color: var(--color-primary);
+  -webkit-transform: translate(-50%, -50%);
+  -ms-transform: translate(-50%, -50%);
+  transform: translate(-50%, -50%);
+  -webkit-transition: background-color 0.25s ease-in-out;
+  -o-transition: background-color 0.25s ease-in-out;
+  transition: background-color 0.25s ease-in-out;
+}
+@media (any-hover: hover) {
+  .video-wrapper__btn:hover {
+    background-color: var(--color-primary-active);
   }
 }
 
@@ -289,4 +371,14 @@ a {
 }
 .main-first__btn:not(:last-child) {
   margin-right: 24px;
+}
+
+.about-section {
+  padding-top: var(--section-offset);
+}
+.about-section__title {
+  margin-bottom: 24px;
+}
+.about-section__descr {
+  margin-bottom: 60px;
 }
