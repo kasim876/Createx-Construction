@@ -5,7 +5,8 @@ if(document.querySelector(".reviews__slider")) {
     navigation: {
       prevEl: ".reviews__nav-btn_prev",
       nextEl: ".reviews__nav-btn_next",
-    }
+    },
+    effect: "coverflow"
   })
 }
 if(document.querySelector(".work-section__slider")) {
