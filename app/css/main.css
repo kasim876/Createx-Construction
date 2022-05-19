@@ -477,6 +477,50 @@ a {
   line-height: 160%;
 }
 
+.checkbox {
+  position: relative;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  padding-left: 28px;
+  cursor: pointer;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+}
+.checkbox__input {
+  position: absolute;
+  opacity: 0;
+}
+.checkbox__input:checked + .checkbox__caption::before {
+  border-color: var(--color-primary);
+  background-color: var(--color-primary);
+}
+.checkbox__caption {
+  display: inline-block;
+  font-size: 14px;
+  line-height: 150%;
+  color: var(--color-outer-space);
+}
+.checkbox__caption::before {
+  content: "";
+  position: absolute;
+  left: 0;
+  top: 0;
+  display: block;
+  border: 1px solid var(--color-black);
+  border-radius: 3px;
+  width: 16px;
+  height: 16px;
+  background-image: url("../img/svg/check.svg");
+  background-position: center;
+  background-repeat: no-repeat;
+  -webkit-transition: border-color 0.25s ease-in-out, background-color 0.25s ease-in-out;
+  -o-transition: border-color 0.25s ease-in-out, background-color 0.25s ease-in-out;
+  transition: border-color 0.25s ease-in-out, background-color 0.25s ease-in-out;
+}
+
 .header {
   padding: 22px 0;
   background-color: var(--color-white);
@@ -1133,4 +1177,43 @@ a {
   grid-template-columns: repeat(12, 1fr);
   margin-bottom: 80px;
   gap: 30px;
+}
+
+.contacts-section {
+  padding: 80px 0;
+  background-image: url("../img/contacts-section-bg.jpg");
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
+}
+.contacts-section__form {
+  margin-left: auto;
+  border-radius: 4px;
+  padding: 48px 40px;
+  max-width: 495px;
+  background-color: var(--color-white);
+}
+.contacts-section__title {
+  margin: 0;
+  margin-bottom: 25px;
+  font-weight: 700;
+  font-size: 28px;
+  line-height: 150%;
+  text-align: center;
+  color: var(--color-black);
+}
+.contacts-section__field {
+  margin-bottom: 20px;
+}
+.contacts-section__textarea {
+  padding-top: 11px;
+  height: 66px;
+  resize: none;
+}
+.contacts-section__btn {
+  margin: 0 auto;
+  margin-top: 21px;
+  width: 174px;
+  height: 44px;
+  font-size: 14px;
 }
