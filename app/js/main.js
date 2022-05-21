@@ -9,6 +9,24 @@ if(document.querySelector(".reviews__slider")) {
     effect: "coverflow"
   })
 }
+const toTopBtn = document.querySelector(".to-top");
+
+const smoothScroll = new SmoothScroll(".to-top", {
+  updateURL: false,
+  speed: 200,
+});
+
+const firstSectionHeight = document.querySelector(".first").offsetHeight;
+
+const isScrollBtnVisible = () => {
+  if(window.pageYOffset > firstSectionHeight) {
+    toTopBtn.classList.add("to-top_visible");
+  } else {
+    toTopBtn.classList.remove("to-top_visible");
+  }
+}
+
+window.addEventListener("scroll", isScrollBtnVisible);
 if(document.querySelector(".work-section__slider")) {
   const workSlider = new Swiper(".work-section__slider", {
     loop: false,
