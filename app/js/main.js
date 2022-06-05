@@ -7,32 +7,88 @@ if(document.querySelector(".reviews__slider")) {
       prevEl: ".reviews__nav-btn_prev",
       nextEl: ".reviews__nav-btn_next",
     },
-    effect: "coverflow"
   })
 }
 
-// smooth scroll
-const toTopBtn = document.querySelector(".to-top");
+// select
 
-if(toTopBtn) {
-  const smoothScroll = new SmoothScroll(".to-top", {
-    updateURL: false,
-    speed: 200,
-  });
+class CustomSelect {
+  static selectedItem = ".select__option_selected";
+  static elementData = "[data-select]";
+  static activeClass = "select_show";
+  static selectedClass = "select__option_selected";
   
-  const firstSectionHeight = document.querySelector(".first").offsetHeight;
-  
-  const isScrollBtnVisible = () => {
-    if(window.pageYOffset > firstSectionHeight) {
-      toTopBtn.classList.add("to-top_visible");
-    } else {
-      toTopBtn.classList.remove("to-top_visible");
+  constructor(selector) {
+    this.element = typeof selector === 'string' ? document.querySelector(selector) : selector;
+    this.elementToggle = this.element.querySelector(".select__toggle");
+    this.onClickFunc = this.onClick.bind(this);
+    this.element.addEventListener("click", this.onClickFunc);
+    document.addEventListener("click", (e) => {
+      if (e.target.closest(".select") !== this.element && this.element.classList.contains(CustomSelect.activeClass)) {
+        this.closeDropdown();
+      } 
+    });
+    document.addEventListener("keydown", (e) => {
+      if (e.key === 'Tab' || e.key === 'Escape') {
+        this.closeDropdown();
+      }
+    })
+  }
+
+  onClick(e) {
+    const target = e.target;
+    const type = target.closest(CustomSelect.elementData).dataset.select;
+
+    if (type === "toggle") {
+      this.toggle();
+    } else if (type === "option") {
+      this.changeOption(target);
+    } else if (type === "backdrop") {
+      this.closeDropdown();
     }
   }
-  
-  window.addEventListener("scroll", isScrollBtnVisible);
+
+  openDropdown() {
+    this.element.classList.add(CustomSelect.activeClass);
+  }
+
+  closeDropdown() {
+    this.element.classList.remove(CustomSelect.activeClass);
+  }
+
+  toggle() {
+    if (this.element.classList.contains(CustomSelect.activeClass)) {
+      this.closeDropdown();
+    } else {
+      this.openDropdown();
+    }
+  }
+
+  changeOption(target) {
+    this.elementToggle.innerHTML = target.innerHTML;
+    this.elementToggle.setAttribute("value", target.dataset.value);
+
+    this.element.querySelector(CustomSelect.selectedItem).classList.remove(CustomSelect.selectedClass);
+    target.classList.add(CustomSelect.selectedClass);
+
+    this.closeDropdown();
+  }
 }
 
+if (document.querySelector(".select")) {
+  const interested = new CustomSelect(".select-interested");
+  const place = new CustomSelect(".select-place");
+}
+// smooth scroll
+
+document.querySelector(".to-top").addEventListener("click", (e) => {
+  e.preventDefault()
+  
+  scroll({
+    top: 0,
+    behavior: "smooth",
+  })
+})
 // work slider
 if(document.querySelector(".work-section__slider")) {
   const workSlider = new Swiper(".work-section__slider", {
