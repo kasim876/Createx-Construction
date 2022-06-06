@@ -1,0 +1,264 @@
+<!DOCTYPE html>
+<html lang="en" class="page" id="page">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="icon" type="image/x-icon" href="favicon.ico">
+  <title>News</title>
+  <link rel="stylesheet" href="css/vendor.css">
+  <link rel="stylesheet" href="css/main.css">
+  <script src="js/vendor.js" defer></script>
+  <script src="js/main.js" defer></script>
+</head>
+
+<body class="page__body">
+  <div class="site-container">
+    <header class="header header_page">
+      <div class="container header__container">
+        <a href="index.html" class="header__logo"><img src="img/svg/logo-header.svg" alt="Logo"></a>
+        <nav class="header__nav">
+          <ul class="list-reset header__nav-list">
+            <li class="header__nav-item"><a href="about.html" class="header__nav-link">About Us</a></li>
+            <li class="header__nav-item"><a href="services.html" class="header__nav-link">Services</a></li>
+            <li class="header__nav-item"><a href="work.html" class="header__nav-link">Work</a></li>
+            <li class="header__nav-item header__nav-item_current"><a href="news.html" class="header__nav-link">News</a></li>
+            <li class="header__nav-item"><a href="contacts.html" class="header__nav-link">Contacts</a></li>
+          </ul>
+        </nav>
+        <div class="header__contacts">
+          <a href="tel:4055550128" class="header__contacts-item header__contacts-item_phone">
+            <span class="header__contacts-caption">Call us</span>
+            <span class="header__contacts-value">(405) 555-0128</span>
+          </a>
+          <a href="mailto:hello@createx.com" class="header__contacts-item header__contacts-item_mail">
+            <span class="header__contacts-caption">Talk to us</span>
+            <span class="header__contacts-value">hello@createx.com</span>
+          </a>
+        </div>
+      </div>
+    </header>
+    <main>
+      <section class="first page-first news-first">
+        <div class="container">
+          <ul class="list-reset breadcrumbs">
+            <li class="breadcrumbs__item"><a href="index.html" class="breadcrumbs__link">Homepage</a></li>
+            <li class="breadcrumbs__item">News</li>
+          </ul>
+          <h1 class="page-first__title">News</h1>
+          <p class="page-first__descr">
+            Stay tuned with our news, expert tips and articles.</p>
+        </div>
+      </section>
+      <section class="categories">
+        <div class="container">
+          <h2 class="title title_center categories__title">Categories</h2>
+          <ul class="list-reset categories__tabs">
+            <li class="categories__tabs-item">
+              <button class="btn-reset categories__tabs-btn categories__tabs-btn_active" data-path="all">All News</button>
+            </li>
+            <li class="categories__tabs-item">
+              <button class="btn-reset categories__tabs-btn" data-path="company">Company News</button>
+            </li>
+            <li class="categories__tabs-item">
+              <button class="btn-reset categories__tabs-btn" data-path="innovation">Innovation</button>
+            </li>
+            <li class="categories__tabs-item">
+              <button class="btn-reset categories__tabs-btn" data-path="industry">Industry News</button>
+            </li>
+            <li class="categories__tabs-item">
+              <button class="btn-reset categories__tabs-btn" data-path="expert">Expert Tips</button>
+            </li>
+            <li class="categories__tabs-item">
+              <button class="btn-reset categories__tabs-btn" data-path="marketing">Marketing</button>
+            </li>
+          </ul>
+          <div class="categories__content">
+            <article class="news-item news-item_medium categories__item" data-target="company">
+              <img src="../img/news1.jpg" alt="News article preview" class="news-item__img">
+              <div class="news-item__content">
+                <h3 class="news-item__title"><a href="news.html" class="news-item__link" target="_blank">How to Build Climate Change-Resilient Infrastructure</a></h3>
+                <div class="news-item__meta">
+                  <a href="news.html" class="news-item__meta-item news-item__link" target="_blank">Industry News</a>
+                  <time class="news-item__meta-item" pubdate datetime="2020-06-24">June 24, 2020</time>
+                  <a href="#" class="news-item__meta-item news-item__link" target="_blank">4 comments</a>
+                </div>
+                <p class="news-item__text">
+                  Ipsum aliquet nisi, hendrerit rhoncus quam tortor, maecenas faucibus. Tincidunt aliquet sit vel, venenatis nulla. Integer bibendum turpis convallis...
+                </p>
+              </div>
+            </article>
+            <article class="news-item news-item_medium categories__item" data-target="innovation">
+              <img src="img/news2_big.jpg" alt="News article preview" class="news-item__img">
+              <div class="news-item__content">
+                <h3 class="news-item__title"><a href="news.html" class="news-item__link" target="_blank">How Construction Can Help Itself</a></h3>
+                <div class="news-item__meta">
+                  <a href="news.html" class="news-item__meta-item news-item__link" target="_blank">Industry News</a>
+                  <time class="news-item__meta-item" pubdate datetime="2020-06-24">June 24, 2020</time>
+                  <a href="#" class="news-item__meta-item news-item__link" target="_blank">4 comments</a>
+                </div>
+                <p class="news-item__text">
+                  Porta habitant vitae quam interdum. Leo viverra non volutpat rhoncus placerat vitae scelerisque. Rhoncus augue faucibus maecenas lacus...
+                </p>
+              </div>
+            </article>
+            <article class="news-item news-item_medium categories__item" data-target="industry">
+              <img src="img/news4.jpg" alt="News article preview" class="news-item__img">
+              <div class="news-item__content">
+                <h3 class="news-item__title"><a href="news.html" class="news-item__link" target="_blank">The Difference Between a Digger and an Excavator</a></h3>
+                <div class="news-item__meta">
+                  <a href="news.html" class="news-item__meta-item news-item__link" target="_blank">Industry News</a>
+                  <time class="news-item__meta-item" pubdate datetime="2020-06-24">June 24, 2020</time>
+                  <a href="#" class="news-item__meta-item news-item__link" target="_blank">4 comments</a>
+                </div>
+                <p class="news-item__text">
+                  Cras est nisi purus velit facilisi vitae, dolor. Lorem scelerisque integer duis et nulla lobortis cursus. Viverra erat sollicitudin praesent viverra...
+                </p>
+              </div>
+            </article>
+            <article class="news-item news-item_medium categories__item" data-target="expert">
+              <img src="img/news5.jpg" alt="News article preview" class="news-item__img">
+              <div class="news-item__content">
+                <h3 class="news-item__title"><a href="news.html" class="news-item__link" target="_blank">Building Construction Hand Tools</a></h3>
+                <div class="news-item__meta">
+                  <a href="news.html" class="news-item__meta-item news-item__link" target="_blank">Industry News</a>
+                  <time class="news-item__meta-item" pubdate datetime="2020-06-24">June 24, 2020</time>
+                  <a href="#" class="news-item__meta-item news-item__link" target="_blank">4 comments</a>
+                </div>
+                <p class="news-item__text">
+                  Tellus quis aliquet volutpat nunc pulvinar donec sed sapien. Vitae elit id dolor, tristique massa. Fames lobortis orci rutrum bibendum integer...
+                </p>
+              </div>
+            </article>
+            <article class="news-item news-item_medium categories__item" data-target="marketing">
+              <img src="img/news6.jpg" alt="News article preview" class="news-item__img">
+              <div class="news-item__content">
+                <h3 class="news-item__title"><a href="news.html" class="news-item__link" target="_blank">Top 10 Construction Trends</a></h3>
+                <div class="news-item__meta">
+                  <a href="news.html" class="news-item__meta-item news-item__link" target="_blank">Industry News</a>
+                  <time class="news-item__meta-item" pubdate datetime="2020-06-24">June 24, 2020</time>
+                  <a href="#" class="news-item__meta-item news-item__link" target="_blank">4 comments</a>
+                </div>
+                <p class="news-item__text">
+                  Dignissim sed enim, eleifend morbi condimentum. Congue id quis vulputate dignissim eget. Ac ullamcorper nunc habitasse enim interdum platea...
+                </p>
+              </div>
+            </article>
+            <article class="news-item news-item_medium categories__item" data-target="company">
+              <img src="img/news3_big.jpg" alt="News article preview" class="news-item__img">
+              <div class="news-item__content">
+                <h3 class="news-item__title"><a href="news.html" class="news-item__link" target="_blank">Types of Flooring Materials</a></h3>
+                <div class="news-item__meta">
+                  <a href="news.html" class="news-item__meta-item news-item__link" target="_blank">Industry News</a>
+                  <time class="news-item__meta-item" pubdate datetime="2020-06-24">June 24, 2020</time>
+                  <a href="#" class="news-item__meta-item news-item__link" target="_blank">4 comments</a>
+                </div>
+                <p class="news-item__text">
+                  Maecenas donec lacinia nunc, quam sit magnis mauris. Neque bibendum et mauris, aenean. Vel arcu amet in sem parturient integer duis et nulla...
+                </p>
+              </div>
+            </article>
+          </div>
+        </div>
+      </section>
+    </main>
+    <footer class="footer">
+      <a href="#page" class="to-top">
+        <span class="to-top__caption">go to top</span>
+        <div class="to-top__btn"><img src="img/svg/arrow-top.svg" alt></div>
+      </a>
+      <div class="container footer__container">
+        <div class="footer__left">
+          <div class="footer__left-top">
+            <a href="index.html" class="footer__logo" target="_blank"><img src="img/svg/logo-footer.svg" alt="Createx Logo"></a>
+            <ul class="list-reset footer__socials">
+              <li class="footer__socials-item">
+                <a href="http://www.whatsapp.com" class="footer__socials-link" target="_blank">
+                  <svg class="footer__socials-ico">
+                    <use xlink:href="img/sprite.svg#whatsapp"></use>
+                  </svg>
+                </a>
+              </li>
+              <li class="footer__socials-item">
+                <a href="http://www.messenger.com" class="footer__socials-link" target="_blank">
+                  <svg class="footer__socials-ico">
+                    <use xlink:href="img/sprite.svg#messanger"></use>
+                  </svg>
+                </a>
+              </li>
+              <li class="footer__socials-item">
+                <a href="http://www.facebook.com" class="footer__socials-link" target="_blank">
+                  <svg class="footer__socials-ico">
+                    <use xlink:href="img/sprite.svg#facebook"></use>
+                  </svg>
+                </a>
+              </li>
+              <li class="footer__socials-item">
+                <a href="http://www.twitter.com" class="footer__socials-link" target="_blank">
+                  <svg class="footer__socials-ico">
+                    <use xlink:href="img/sprite.svg#twitter"></use>
+                  </svg>
+                </a>
+              </li>
+              <li class="footer__socials-item">
+                <a href="http://www.youtube.com" class="footer__socials-link" target="_blank">
+                  <svg class="footer__socials-ico">
+                    <use xlink:href="img/sprite.svg#youtube"></use>
+                  </svg>
+                </a>
+              </li>
+            </ul>
+          </div>
+          <p class="footer__left-descr">Createx Construction Bureau has been successfully operating in the USA construction market since 2000. We are proud to offer you quality construction and exemplary service. Our mission is to set the highest standards for construction sphere.</p>
+        </div>
+        <div class="footer__right">
+          <h3 class="footer__right-title">Let’s stay in touch</h3>
+          <form action="#" class="footer__form">
+            <input type="email" class="input-reset footer__input" placeholder="Your email address" required>
+            <button class="btn-reset btn-solid footer__btn">Subscribe</button>
+          </form>
+          <p class="footer__right-descr">*Subscribe to our newsletter to receive communications and early updates from Createx Construction Bureau.</p>
+        </div>
+        <div class="footer__contacts">
+          <h4 class="footer__contacts-title">Head Office</h4>
+          <ul class="list-reset footer__contacts-list">
+            <li class="footer__contacts-item">
+              <span class="footer__contacts-caption">Address:</span>
+              <address class="footer__contacts-value">8502 Preston Rd. Inglewood, New York</address>
+            </li>
+            <li class="footer__contacts-item">
+              <span class="footer__contacts-caption">Call:</span>
+              <a href="tel:4055550128" class="footer__contacts-value">(405) 555-0128</a>
+            </li>
+            <li class="footer__contacts-item">
+              <span class="footer__contacts-caption">Email:</span>
+              <a href="mailto:hello@createx.com" class="footer__contacts-value">hello@createx.com</a>
+            </li>
+          </ul>
+        </div>
+        <div class="footer__nav">
+          <div class="footer__nav-col">
+            <h4 class="footer__nav-title">Who We Are</h4>
+            <ul class="list-reset footer__nav-list">
+              <li class="footer__nav-item"><a href="about.html" class="footer__nav-link" target="_blank">About Us</a></li>
+              <li class="footer__nav-item"><a href="#" class="footer__nav-link" target="_blank">Available Positions</a></li>
+              <li class="footer__nav-item"><a href="contacts.html" class="footer__nav-link" target="_blank">Contacts</a></li>
+            </ul>
+          </div>
+          <div class="footer__nav-col">
+            <h4 class="footer__nav-title">Our Experience</h4>
+            <ul class="list-reset footer__nav-list">
+              <li class="footer__nav-item"><a href="services.html" class="footer__nav-link" target="_blank">Services</a></li>
+              <li class="footer__nav-item"><a href="work.html" class="footer__nav-link" target="_blank">Work</a></li>
+              <li class="footer__nav-item"><a href="news.html" class="footer__nav-link" target="_blank">News</a></li>
+            </ul>
+          </div>
+        </div>
+        <small class="footer__all-rights">© All rights reserved. Made from <a href="mailto:max.lukashenko2017@gmail.com">max.lukashenko2017@gmail.com</a></small>
+      </div>
+    </footer>
+  </div>
+</body>
+
+</html>
