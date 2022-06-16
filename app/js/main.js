@@ -114,7 +114,7 @@ if (document.querySelector(".history__slider")) {
   var historyPaginationClass = "history__pagination-item";
   var swiper = new Swiper(".history__slider", {
     loop: false,
-    spaceBetween: 100,
+    slidesPerView: 1,
     navigation: {
       prevEl: ".history__nav-btn_prev",
       nextEl: ".history__nav-btn_next"
