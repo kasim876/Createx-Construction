@@ -232,30 +232,20 @@ document.querySelector(".to-top").addEventListener("click", function (e) {
   });
 }); // video
 
-var video = document.querySelector(".video-wrapper__content");
-var videoBlock = document.querySelector(".video-wrapper");
-var videoPlayBtn = document.querySelector(".video-wrapper__btn");
-var videoBlockPlayedClass = "video-wrapper_played";
-var videoBtnPlayedClass = "video-wrapper__btn_played";
-
 if (document.querySelector(".video-wrapper")) {
   var videoPlay = function videoPlay() {
-    videoBlock.classList.add(videoBlockPlayedClass);
+    videoWrapper.classList.add(videoWrapperPlayedClass);
+    videoPlayBtn.classList.add(videoBtnPlayedClass);
     video.play();
     video.controls = true;
-    videoPlayBtn.classList.add(videoBtnPlayedClass);
   };
 
-  var pause = function pause() {
-    videoBlock.classList.remove(videoBlockPlayedClass);
-    video.controls = false;
-    videoPlayBtn.classList.remove(videoBtnPlayedClass);
-  };
-
-  ;
-  ;
-  videoPlayBtn.addEventListener('click', videoPlay);
-  video.addEventListener('pause', pause);
+  var video = document.querySelector(".video-wrapper__content");
+  var videoWrapper = document.querySelector(".video-wrapper");
+  var videoPlayBtn = document.querySelector(".video-wrapper__btn");
+  var videoWrapperPlayedClass = "video-wrapper_played";
+  var videoBtnPlayedClass = "video-wrapper__btn_played";
+  videoPlayBtn.addEventListener("click", videoPlay);
 } // work slider
 
 
