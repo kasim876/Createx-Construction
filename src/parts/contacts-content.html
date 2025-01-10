@@ -1,0 +1,87 @@
+<section class="contacts">
+  <div class="container">
+    <h2 class="title title_center contacts__title">Contact us</h2>
+    <p class="descr descr_center contacts__descr">Please complete the form. Detailed information will help us to make a tuned offer.</p>
+    <div class="contacts__content">
+      <img src="img/contacts-woman.jpg" alt="Women" class="contacts__img" width="495" height="586">
+      <form action="#" method="post" class="contacts__form">
+        <div class="contacts__row">
+          <label class="field contacts__field">
+            <span class="field__caption">Name*</span>
+            <input type="text" name="name" class="input-reset field__input" placeholder="Your name" required>
+          </label>
+          <div class="field contacts__field">
+            <span class="field__caption">I am interested in</span>
+            <div class="select select-interested">
+              <button type="button" name="interested" value="construction" class="btn-reset select__toggle" data-select="toggle">Construction</button>
+              <div class="select__dropdown">
+                <ul class="list-reset select__options">
+                  <li class="select__option select__option_selected" data-value="construction" data-select="option">Construction</li>
+                  <li class="select__option" data-value="project-development" data-select="option">Project Development</li>
+                  <li class="select__option" data-value="interior-design" data-select="option">Interior Design</li>
+                  <li class="select__option" data-value="repairs" data-select="option">Repairs</li>
+                </ul>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="contacts__row">
+          <label class="field contacts__field">
+            <span class="field__caption">Phone*</span>
+            <input type="tel" name="tel" class="input-reset field__input" placeholder="Your phone number" required>
+          </label>
+          <div class="field contacts__field">
+            <span class="field__caption">Location</span>
+            <div class="select select-place">
+              <button type="button" name="interested" value="new-york" class="btn-reset select__toggle" data-select="toggle">New York</button>
+              <div class="select__dropdown">
+                <ul class="list-reset select__options">
+                  <li class="select__option select__option_selected" data-value="new-york" data-select="option">New York</li>
+                  <li class="select__option" data-value="seattle" data-select="option">Seattle</li>
+                  <li class="select__option" data-value="las-vegas" data-select="option">Las Vegas</li>
+                  <li class="select__option" data-value="los-angeles" data-select="option">Los Angeles</li>
+                  <li class="select__option" data-value="washington" data-select="option">Washington</li>
+                </ul>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="contacts__row">
+          <label class="field contacts__field">
+            <span class="field__caption">Email</span>
+            <input type="email" name="email" class="input-reset field__input" placeholder="Your working email" required>
+          </label>
+          <fieldset class="field contacts__field">
+            <legend class="field__caption">Preferred contact method</legend>
+            <div class="contacts__radio-flex">
+              <label class="radio">
+                <input type="radio" name="contact-method" class="radio__input" checked>
+                <span class="radio__caption">Phone</span>
+              </label>
+              <label class="radio">
+                <input type="radio" name="contact-method" class="radio__input">
+                <span class="radio__caption">Email</span>
+              </label>
+              <label class="radio">
+                <input type="radio" name="contact-method" class="radio__input">
+                <span class="radio__caption">Viber</span>
+              </label>
+            </div>
+          </fieldset>
+        </div>
+        <label class="field">
+          <span class="field__caption">Message*</span>
+          <textarea class="input-reset field__input contacts__textarea" name="message" placeholder="Your message" required></textarea>
+        </label>
+        <div class="contacts__bottom">
+          <label class="checkbox contacts__checkbox">
+            <input type="checkbox" name="agree" class="checkbox__input" required>
+            <span class="checkbox__caption">I agree to receive communications from Createx Construction Bureau.</span>
+          </label>
+          <button class="btn-reset btn-solid contacts__btn" type="submit">Send Request</button>
+        </div>
+      </form>
+    </div>
+    </div>
+  </div>
+</section>

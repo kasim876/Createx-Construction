@@ -1,0 +1,47 @@
+.contacts-section {
+  padding: 80px 0;
+  background-image: url("../img/contacts-section-bg.jpg");
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
+
+  &__form {
+    margin-left: auto;
+    border-radius: 4px;
+    padding: 48px 40px;
+    max-width: 495px;
+    background-color: var(--color-white);
+
+    @include mobile {
+      padding: 28px 20px;
+    }
+  }
+
+  &__title {
+    margin: 0;
+    margin-bottom: 25px;
+    font-weight: 700;
+    font-size: 28px;
+    line-height: 150%;
+    text-align: center;
+    color: var(--color-black);
+  }
+
+  &__field {
+    margin-bottom: 20px;
+  }
+
+  &__textarea {
+    padding-top: 11px;
+    height: 66px;
+    resize: none;
+  }
+
+  &__btn {
+    margin: 0 auto;
+    margin-top: 21px;
+    width: 174px;
+    height: 44px;
+    font-size: 14px;
+  }
+}

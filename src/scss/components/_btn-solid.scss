@@ -1,0 +1,14 @@
+.btn-solid {
+  border-radius: 4px;
+  font-weight: 700;
+  font-size: 16px;
+  letter-spacing: 0.5px;
+  text-transform: uppercase;
+  color: var(--color-white);
+  background-color: var(--color-primary);
+  transition: background-color 0.25s ease-in-out;
+
+  @include hover {
+    background-color: var(--color-primary-active);
+  }
+}

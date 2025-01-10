@@ -1,0 +1,17 @@
+<!DOCTYPE html>
+<html lang="en" class="page" id="page">
+@include('parts/head.html', {
+  "title": "News"
+})
+<body class="page__body">
+  <div class="site-container">
+    @include('parts/news-header.html')
+    <main>
+      @include('parts/news-first.html')
+      @include('parts/categories.html')
+    </main>
+    @include('parts/footer.html')
+    <div class="overlay"></div>
+  </div>
+</body>
+</html>

@@ -1,0 +1,63 @@
+.categories {
+  padding: 120px 0;
+
+  &__title {
+    margin-bottom: 40px;
+  }
+
+  &__tabs {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    margin-bottom: 60px;
+    row-gap: 15px;
+  }
+
+  &__tabs-item {
+    width: 100%;
+    max-width: 205px;
+
+    @include mobile {
+      width: 50%;
+    }
+  }
+
+  &__tabs-btn {
+    border: 1px solid transparent;
+    border-radius: 4px;
+    width: 100%;
+    height: 46px;
+    font-weight: 700;
+    font-size: 16px;
+    line-height: 160%;
+    color: var(--color-manatee);
+    transition: color 0.25s ease-in-out, border-color 0.25s ease-in-out;
+
+    &_active {
+      border-color: currentcolor;
+      color: var(--color-primary);
+      pointer-events: none;
+    }
+
+    @include hover {
+      color: var(--color-black);
+    }
+  }
+
+  &__content {
+    position: relative;
+    display: grid;
+    column-gap: 30px;
+    grid-template-columns: repeat(12, 1fr);
+    row-gap: 60px;
+
+    @include tablet {
+      grid-template-columns: repeat(6, 1fr);
+      row-gap: 30px;
+    }
+  }
+
+  &__item_hidden {
+    display: none;
+  }
+}

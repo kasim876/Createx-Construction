@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en" class="page" id="page">
+@include('parts/head.html', {
+  "title": "About Us"
+})
+<body class="page__body">
+  <div class="site-container">
+    @include('parts/about-header.html')
+    <main>
+      @include('parts/about-first.html')
+      @include('parts/achivement.html')
+      @include('parts/about-advantages.html')
+      @include('parts/history.html')
+      @include('parts/about-partners.html')
+      @include('parts/team.html')
+    </main>
+    @include('parts/footer.html')
+    <div class="overlay"></div>
+  </div>
+</body>
+</html>

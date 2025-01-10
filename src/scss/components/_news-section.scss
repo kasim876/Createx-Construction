@@ -1,0 +1,19 @@
+.news-section {
+  margin-top: -180px;
+  padding-bottom: 120px;
+
+  &__title {
+    margin-bottom: 59px;
+  }
+
+  &__content {
+    display: grid;
+    grid-template-columns: repeat(12, 1fr);
+    margin-bottom: 80px;
+    gap: 30px;
+
+    @include tablet {
+      grid-template-columns: repeat(6, 1fr);
+    }
+  }
+}

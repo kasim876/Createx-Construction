@@ -1,0 +1,145 @@
+.achivement {
+  padding: 120px 0;
+
+  &__list {
+    display: grid;
+    align-items: baseline;
+    grid-template-columns: repeat(4, 1fr);
+    margin-bottom: 240px;
+    row-gap: 30px;
+  }
+
+  &__item {
+    grid-column: 1 span;
+    padding-top: 68px;
+    text-align: center;
+
+    @include laptop {
+      grid-column: 2 span;
+    }
+
+    @include mobile {
+      grid-column: 4 span;
+    }
+  }
+
+  &__value {
+    margin-bottom: 8px;
+    font-weight: 700;
+    font-size: 46px;
+    line-height: 130%;
+    color: var(--color-primary);
+  }
+
+  &__caption {
+    font-size: 14px;
+    line-height: 150%;
+    color: var(--color-black);
+  }
+
+  &__content {
+    display: flex;
+
+    @include laptop {
+      flex-direction: column;
+      align-items: center;
+    }
+  }
+
+  &__img {
+    display: block;
+    border-radius: 4px;
+  }
+
+  &__quote {
+    position: relative;
+    right: 30px;
+    top: -120px;
+    z-index: 10;
+    display: block;
+    flex: 0 0 735px;
+    margin: 0;
+    border-radius: 4px;
+    padding: 80px 105px 70px 135px;
+    box-shadow: var(--shadow-main);
+    background-color: var(--color-white);
+
+    &::before {
+      content: "";
+      position: absolute;
+      left: 75px;
+      top: 80px;
+      display: block;
+      width: 28px;
+      height: 20px;
+      background-image: url("../img/svg/quotes.svg");
+
+      @include tablet {
+        left: 20px;
+        top: 25px;
+      }
+    }
+
+    @include desktop {
+      right: 100px;
+    }
+
+    @include laptop {
+      right: 0;
+      top: 0;
+      flex: 0 0 auto;
+    }
+
+    @include tablet {
+      padding: 60px 20px 20px;
+    }
+  }
+
+  &__quote-text {
+    margin: 0;
+    margin-bottom: 50px;
+    font-weight: 700;
+    font-size: 20px;
+    line-height: 150%;
+    color: var(--color-black);
+
+    @include tablet {
+      font-size: 16px;
+    }
+  }
+
+  &__quote-bottom {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+    @include mobile {
+      flex-direction: column;
+      align-items: flex-start;
+    }
+  }
+
+  &__quote-autor {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    font-style: normal;
+
+    @include mobile {
+      margin-bottom: 30px;
+    }
+  }
+
+  &__quote-autor-name {
+    font-weight: 700;
+    font-size: 16px;
+    line-height: 160%;
+    color: var(--color-black);
+  }
+
+  &__quote-autor-position {
+    font-size: 14px;
+    line-height: 150%;
+    color: var(--color-storm);
+  }
+}

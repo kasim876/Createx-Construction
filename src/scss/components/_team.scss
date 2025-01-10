@@ -1,0 +1,100 @@
+.team {
+  padding: 120px 0;
+
+  &__title {
+    margin-bottom: 24px;
+  }
+
+  &__descr {
+    margin-bottom: 60px;
+  }
+
+  &__list {
+    display: grid;
+    column-gap: 30px;
+    grid-template-columns: repeat(4, 1fr);
+    row-gap: 60px;
+
+    @include laptop {
+      grid-template-columns: repeat(2, 1fr);
+    }
+  }
+
+  &__item {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+
+    @include hover {
+      .team__socials {
+        opacity: 1;
+        visibility: visible;
+      }
+    }
+  }
+
+  &__img {
+    display: block;
+    margin-bottom: 16px;
+    border-radius: 4px;
+  }
+
+  &__socials {
+    position: absolute;
+    top: 280px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 0 0 4px 4px;
+    padding: 20px 0;
+    width: 100%;
+    background-color: rgba(255 90 48 / 70%);
+    opacity: 0;
+    visibility: hidden;
+    transition: opacity 0.25s ease-in-out, visibility 0.25s ease-in-out;
+  }
+
+  &__socials-item {
+    display: flex;
+    fill: var(--color-white);
+    transition: fill 0.25s ease-in-out;
+
+    &:not(:last-child) {
+      margin-right: 20px;
+    }
+
+    @include hover {
+      fill: rgba(255 255 255 / 40%);
+    }
+  }
+
+  &__socials-ico {
+    width: 20px;
+    height: 20px;
+    fill: inherit;
+  }
+
+  &__name {
+    margin-bottom: 4px;
+    font-weight: 700;
+    font-size: 20px;
+    line-height: 150%;
+    color: var(--color-outer-space);
+
+    @include mobile {
+      font-size: 18px;
+    }
+  }
+
+  &__position {
+    font-size: 16px;
+    line-height: 160%;
+    color: var(--color-storm);
+
+    @include mobile {
+      font-size: 14px;
+    }
+  }
+}

@@ -1,0 +1,31 @@
+.load-more {
+  display: inline-flex;
+  align-items: center;
+  margin-bottom: 100px;
+  color: var(--color-outer-space);
+  transition: color 0.25s ease-in-out;
+
+  &_hidden {
+    display: none;
+  }
+
+  &__ico {
+    margin-right: 16px;
+    width: 24px;
+    height: 24px;
+    fill: currentcolor;
+    pointer-events: none;
+  }
+
+  &__caption {
+    display: block;
+    font-weight: 700;
+    font-size: 16px;
+    line-height: 160%;
+    pointer-events: none;
+  }
+
+  @include hover {
+    color: var(--color-primary);
+  }
+}

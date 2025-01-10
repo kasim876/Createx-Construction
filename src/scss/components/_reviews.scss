@@ -1,0 +1,124 @@
+.reviews {
+  padding-top: 80px;
+  background-color: var(--color-light-gray);
+
+  &__title {
+    margin-bottom: 60px;
+
+    @include desktop {
+      text-align: center;
+    }
+  }
+
+  &__content {
+    display: flex;
+    align-items: flex-start;
+    justify-content: space-between;
+
+    @include desktop {
+      justify-content: center;
+    }
+  }
+
+  &__slider {
+    position: relative;
+    margin: 0;
+    max-width: 600px;
+  }
+
+  &__slide {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    width: 100%;
+  }
+
+  &__slide-img {
+    display: block;
+    margin-bottom: 24px;
+  }
+
+  &__slide-text {
+    margin: 0;
+    margin-bottom: 24px;
+    font-size: 16px;
+    line-height: 160%;
+    color: var(--color-outer-space);
+  }
+
+  &__slide-autor {
+    display: block;
+    margin-bottom: 4px;
+    font-weight: 700;
+    font-size: 16px;
+    line-height: 160%;
+    color: var(--color-black);
+  }
+
+  &__slide-position {
+    display: block;
+    font-size: 14px;
+    line-height: 150%;
+    color: var(--color-storm);
+  }
+
+  &__nav {
+    position: absolute;
+    right: 0;
+    bottom: 0;
+    z-index: 10;
+    display: flex;
+  }
+
+  &__nav-btn {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 50%;
+    width: 48px;
+    height: 48px;
+    fill: var(--color-black);
+    background-color: rgba(0 0 0 / 0%);
+    transition: fill 0.25s ease-in-out, background-color 0.25s ease-in-out;
+
+    &:not(:last-child) {
+      margin-right: 10px;
+    }
+
+    &.swiper-button-disabled {
+      fill: var(--color-storm);
+      pointer-events: none;
+    }
+
+    @include hover {
+      fill: var(--color-white);
+      background-color: var(--color-primary);
+    }
+  }
+
+  &__nav-ico {
+    width: 24px;
+    height: 24px;
+    fill: inherit;
+  }
+
+  &__img {
+    position: relative;
+    top: -120px;
+    display: block;
+    margin-bottom: -180px;
+    margin-left: 15px;
+    border-radius: 4px;
+  }
+
+  @include desktop {
+    &__img {
+      display: none;
+    }
+  }
+
+  @include desktop {
+    padding-bottom: 80px;
+  }
+}

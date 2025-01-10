@@ -1,0 +1,33 @@
+.breadcrumbs {
+  display: flex;
+  align-items: center;
+  margin-bottom: 40px;
+
+  &__item {
+    display: flex;
+    align-items: center;
+    font-size: 14px;
+    line-height: 150%;
+    color: var(--color-manatee);
+
+    &:not(:last-child)::after {
+      content: "/";
+      display: block;
+      margin: 0 8px;
+      color: var(--color-manatee);
+    }
+
+    @include mobile {
+      font-size: 12px;
+    }
+  }
+
+  &__link {
+    color: var(--color-outer-space);
+    transition: color 0.25s ease-in-out;
+
+    @include hover {
+      color: var(--color-primary);
+    }
+  }
+}

@@ -1,0 +1,129 @@
+.offices {
+  padding-top: 80px;
+  padding-bottom: 60px;
+  background-color: var(--light-gray);
+
+  &__title {
+    margin-bottom: 24px;
+  }
+
+  &__descr {
+    margin-bottom: 60px;
+  }
+
+  &__list {
+    --offices-gap: 240px;
+
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: var(--offices-gap);
+
+    @include desktop {
+      --offices-gap: 120px;
+    }
+
+    @include laptop {
+      --offices-gap: 25px;
+    }
+
+    @include tablet {
+      --offices-gap: 40px;
+
+      grid-template-columns: repeat(1, 1fr);
+    }
+  }
+
+  &__item {
+    position: relative;
+    grid-column: 1 span;
+    margin: 0 auto;
+
+    &:not(:last-child)::after {
+      content: "";
+      position: absolute;
+      right: calc(-1 * var(--offices-gap) / 2);
+      top: 0;
+      bottom: 0;
+      display: block;
+      width: 2px;
+      background:
+        linear-gradient(
+          180deg,
+          rgba(218 219 221 / 0%) 0%,
+          rgba(218 219 221 / 50%) 20%,
+          rgba(218 219 221 / 100%) 50%,
+          rgba(218 219 221 / 50%) 80%,
+          rgba(218 219 221 / 0%) 100%
+        );
+
+      @include tablet {
+        display: none;
+      }
+    }
+  }
+
+  &__subtitle {
+    margin: 0;
+    margin-bottom: 24px;
+    font-weight: 700;
+    font-size: 28px;
+    line-height: 150%;
+  }
+
+  &__address {
+    display: block;
+    margin-bottom: 4px;
+    font-style: normal;
+    font-size: 16px;
+    line-height: 160%;
+    color: var(--color-black);
+  }
+
+  &__link {
+    display: inline-block;
+    margin-bottom: 20px;
+    border-bottom: 2px solid currentcolor;
+    font-size: 16px;
+    line-height: 160%;
+    color: var(--color-primary);
+    transition: color 0.25s ease-in-out;
+
+    @include hover {
+      color: var(--color-primary-active);
+    }
+  }
+
+  &__contacts {
+    display: flex;
+    flex-direction: column;
+  }
+
+  &__contact {
+    display: inline-flex;
+    align-items: center;
+    font-size: 16px;
+    line-height: 160%;
+
+    &-caption {
+      display: block;
+      margin-right: 4px;
+      color: var(--color-storm);
+    }
+
+    &-value {
+      display: block;
+      color: var(--color-black);
+      transition: color 0.25s ease-in-out;
+
+      &_link {
+        @include hover {
+          color: var(--color-primary);
+        }
+      }
+    }
+
+    &:not(:last-child) {
+      margin-bottom: 4px;
+    }
+  }
+}

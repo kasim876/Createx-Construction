@@ -1,0 +1,78 @@
+.work-section {
+  padding: var(--section-offset) 0;
+
+  &__header {
+    position: relative;
+    z-index: 10;
+    display: flex;
+    align-items: flex-end;
+    justify-content: space-between;
+    margin-bottom: 60px;
+
+    @include tablet {
+      flex-direction: column;
+      margin-bottom: 30px;
+    }
+  }
+
+  &__title {
+    max-width: 705px;
+
+    @include tablet {
+      margin-bottom: 24px;
+    }
+  }
+
+  &__nav {
+    display: flex;
+    align-items: center;
+
+    @include tablet {
+      justify-content: space-between;
+      width: 100%;
+    }
+  }
+
+  &__nav-btn {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 50%;
+    width: 48px;
+    height: 48px;
+    fill: var(--color-black);
+    background-color: var(--color-white);
+    transition: background-color 0.25s ease-in-out, fill 0.25s ease-in-out;
+
+    &:not(:last-child) {
+      margin-right: 10px;
+    }
+
+    &:focus {
+      outline: none;
+    }
+
+    &.swiper-button-disabled {
+      fill: var(--color-storm) !important; /*stylelint-disable-line*/
+      background-color: var(--color-white) !important; /*stylelint-disable-line*/
+      pointer-events: none !important; /*stylelint-disable-line*/
+    }
+
+    @include hover {
+      fill: var(--color-white);
+      background-color: var(--color-primary);
+    }
+  }
+
+  &__ico {
+    width: 24px;
+    height: 24px;
+    fill: inherit;
+  }
+
+  &__slider {
+    margin: -30px;
+    margin-bottom: 50px;
+    padding: 30px;
+  }
+}

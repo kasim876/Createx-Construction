@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html lang="en" class="page" id="page">
+@include('parts/head.html', {
+  "title": "Contacts"
+})
+<body class="page__body">
+  <div class="site-container">
+    @include('parts/contacts-header.html')
+    <main>
+      @include('parts/contacts-first.html')
+      @include('parts/contacts-content.html')
+      @include('parts/offices.html')
+      @include('parts/find-us.html')
+    </main>
+    @include('parts/footer.html')
+    <div class="overlay"></div>
+  </div>
+</body>
+</html>

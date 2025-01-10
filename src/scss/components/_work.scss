@@ -1,0 +1,112 @@
+.work {
+  &__tabs {
+    position: relative;
+    top: -59px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 61px;
+
+    @include laptop {
+      flex-wrap: wrap;
+      gap: 20px;
+    }
+  }
+
+  &__tabs-item {
+    width: 100%;
+    height: 154px;
+
+    &:not(:last-child) {
+      margin-right: 20px;
+
+      @include laptop {
+        margin-right: 0;
+      }
+    }
+
+    @include laptop {
+      width: 46%;
+      height: 130px;
+    }
+  }
+
+  &__tabs-btn {
+    border-radius: 4px;
+    padding: 10px;
+    width: 100%;
+    height: 100%;
+    box-shadow: 0 30px 40px -25px rgba(0 0 0 / 8%);
+    color: var(--color-manatee);
+    fill: var(--color-primary);
+    background-color: var(--color-white);
+    transition:
+      background-color 0.25s ease-in-out,
+      color 0.25s ease-in-out,
+      box-shadow 0.25s ease-in-out,
+      fill 0.25s ease-in-out;
+
+    &_current {
+      box-shadow: 0 30px 40px -25px var(--color-primary);
+      color: var(--color-white);
+      fill: currentcolor;
+      background-color: var(--color-primary);
+      pointer-events: none;
+    }
+
+    @include hover {
+      color: var(--color-black);
+    }
+  }
+
+  &__tabs-ico {
+    margin-bottom: 13px;
+    width: 48px;
+    height: 48px;
+    fill: inherit;
+    pointer-events: none;
+
+    @include mobile {
+      margin-bottom: 8px;
+      width: 36px;
+      height: 36px;
+    }
+  }
+
+  &__tabs-caption {
+    display: block;
+    font-weight: 700;
+    font-size: 16px;
+    line-height: 160%;
+    color: inherit;
+    pointer-events: none;
+
+    @include mobile {
+      font-size: 12px;
+    }
+  }
+
+  &__content {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    margin-bottom: 60px;
+    gap: 30px;
+
+    @include laptop {
+      grid-template-columns: repeat(2, 1fr);
+      gap: 10px;
+    }
+  }
+
+  &__content-item {
+    display: none;
+  }
+
+  &__content-item_visible {
+    display: block;
+  }
+
+  &__content-item_more-visible {
+    display: none;
+  }
+}

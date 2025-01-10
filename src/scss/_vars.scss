@@ -1,0 +1,24 @@
+/*stylelint-disable*/
+:root {
+  --font-family: "Ubuntu", sans-serif;
+
+  --container-offset: 15px;
+  --container-width: 1230px;
+  --section-offset: 120px;
+
+  --shadow-main:
+    0 80px 80px -20px rgba(154 156 165 / 8%),
+    0 30px 24px -10px rgba(154 156 165 / 5%),
+    0 12px 10px -6px rgba(154 156 165 / 4%),
+    0 4px 4px -4px rgba(30 33 44 / 3%);
+
+  --color-white: #fff;
+  --color-black: #1e212c;
+  --color-outer-space: #424551;
+  --color-primary: #ff5a30;
+  --color-primary-active: #fc3300;
+  --color-storm: #787a80;
+  --color-light-gray: #f4f5f6;
+  --color-iron: #d7dadd;
+  --color-manatee: #9a9ca5;
+}

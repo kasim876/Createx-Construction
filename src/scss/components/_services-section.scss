@@ -1,0 +1,125 @@
+.services-section {
+  padding-top: 212px;
+  padding-bottom: 80px;
+  background-image: url("../img/services-section-bg.jpg");
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
+
+  &__title {
+    margin-bottom: 24px;
+  }
+
+  &__descr {
+    margin-bottom: 61px;
+  }
+
+  &__list {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    margin-bottom: 80px;
+    gap: 30px;
+
+    @include desktop {
+      grid-template-columns: repeat(2, 1fr);
+    }
+
+    @include mobile {
+      grid-template-columns: repeat(1, 1fr);
+    }
+  }
+
+  &__link {
+    position: relative;
+    display: block;
+    border-radius: 4px;
+    padding: 10px;
+    height: 285px;
+    color: var(--color-black);
+    fill: var(--color-primary);
+    background-color: var(--color-white);
+    transition: fill 0.25s ease-in-out, color 0.25s ease-in-out;
+
+    &::before {
+      content: "";
+      position: absolute;
+      left: 0;
+      right: 0;
+      top: 0;
+      bottom: 0;
+      z-index: 5;
+      display: block;
+      border-radius: 4px;
+      background-color: rgba(30 33 44 / 60%);
+      opacity: 0;
+      transition: opacity 0.25s ease-in-out;
+    }
+
+    &::after {
+      content: "";
+      position: absolute;
+      left: 0;
+      right: 0;
+      top: 0;
+      bottom: 0;
+      display: block;
+      border-radius: 4px;
+      background-image: url("../img/interior-design.jpg");
+      background-position: center center;
+      background-size: cover;
+      background-repeat: no-repeat;
+      opacity: 0;
+      transition: opacity 0.25s ease-in-out;
+    }
+
+    @include hover {
+      color: var(--color-white);
+      fill: currentcolor;
+
+      &::before {
+        opacity: 1;
+      }
+
+      &::after {
+        opacity: 1;
+      }
+    }
+
+    @include mobile {
+      height: 200px;
+    }
+  }
+
+  &__content {
+    position: relative;
+    z-index: 10;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    height: 100%;
+  }
+
+  &__ico {
+    margin-bottom: 24px;
+    width: 52px;
+    height: 52px;
+    fill: inherit;
+  }
+
+  &__name {
+    display: block;
+    font-weight: 700;
+    font-size: 20px;
+    line-height: 150%;
+    text-align: center;
+
+    @include mobile {
+      font-size: 18px;
+    }
+  }
+
+  @include tablet {
+    padding-top: 120px;
+  }
+}
